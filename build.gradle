@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    jcenter()
+    mavenLocal()    
+}
+
+dependencies {
+   
+   compile group: 'net.sf.jt400', name: 'jt400', version: '6.6'     
+   testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.7'
+   testCompile group: 'com.oracle', name: 'ojdbc6', version: '12.1.0.1-atlassian-hosted'
+   testCompile group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '6.3.6.jre8-preview'
+   compile group: 'org.postgresql', name: 'postgresql', version: '42.1.4'
+   
+
+    implementation 'com.google.guava:guava:22.0'
+    testImplementation 'junit:junit:4.12'
+}
